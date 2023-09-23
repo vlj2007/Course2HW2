@@ -1,12 +1,14 @@
-public class Car {
-    public String modelName;
-    public int wheelsCount;
+public class Car extends Motor {
 
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+    public Car(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
     }
 
-    public void checkEngine() {
-        System.out.println("Проверяем двигатель");
+    public void service() {
+        if (this != null) {
+            for (int i = 0; i < this.getWheelsCount(); i++) {
+                this.updateTyre();
+            }
+        }
     }
 }

@@ -1,17 +1,18 @@
-public class Truck {
-    public String modelName;
-    public int wheelsCount;
+public class Truck extends Motor {
 
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
-    }
-
-    public void checkEngine() {
-        System.out.println("Проверяем двигатель");
+    public Truck(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
     }
 
     public void checkTrailer() {
         System.out.println("Проверяем прицеп");
     }
 
+    public void service() {
+        if (this != null) {
+            for (int i = 0; i < this.getWheelsCount(); i++) {
+                this.updateTyre();
+            }
+        }
+    }
 }
