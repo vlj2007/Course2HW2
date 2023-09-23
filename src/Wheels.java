@@ -12,19 +12,13 @@ public abstract class Wheels implements Transport {
         return modelName;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
-    public int getWheelsCount() {
+    public int getWheelsCount(){
         return wheelsCount;
     }
 
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
-    }
-
     @Override
-    public abstract void updateTyre();
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
+    }
 
 }
